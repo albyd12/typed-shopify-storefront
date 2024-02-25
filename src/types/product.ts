@@ -48,6 +48,6 @@ export interface CollectionProduct extends ProductBase {}
 export type Collection = ProductBase[];
 
 export interface LineItem {
-  variantId: ProductVariant;
+  variantId: string;
   amount: number;
 }
