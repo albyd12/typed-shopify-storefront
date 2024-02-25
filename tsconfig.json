@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "module": "ESNext",
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "typed-storefront": ["./src"]
+    }
+  },
+  "include": ["src/**/*", "test/**/*"]
+}
