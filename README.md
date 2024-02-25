@@ -3,9 +3,11 @@
 Shopify Storefront API client
 
 ### Motivation
+
 Whilst building a Shopify storefront, I wanted a typed, lightweight library for interacting the the Storefront API.
 
 ### Usage
+
 ```typescript
 import shopify, { ProductVariant, SelectedProductOption, LineIem } from 'typed-shopify-storefront'
 
