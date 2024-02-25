@@ -8,6 +8,10 @@
     "type": "git",
     "url": "git+https://github.com/0xalby/typed-storefront.git"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "keywords": [
     "shopify",
     "storefront",
