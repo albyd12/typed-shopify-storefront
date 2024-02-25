@@ -6,6 +6,7 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "esModuleInterop": true,
+    "declaration": true,
     "sourceMap": true,
     "strict": true,
     "noImplicitAny": true,
