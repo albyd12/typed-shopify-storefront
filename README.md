@@ -1,12 +1,12 @@
 # Typed Storefront
 
-Shopify Storefront API client
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub issues](https://img.shields.io/github/issues/0xalby/typed-shopify-storefront.svg)](https://github.com/0xalby/typed-shopify-storefront/issues)
 
-### Motivation
 
-Whilst building a Shopify storefront, I wanted a typed, lightweight library for interacting the the Storefront API.
+A simple, lightweight explicit library for interacting with the Shopify Storefront API
 
-### Usage
+### Example
 
 ```typescript
 import shopify, { ProductVariant, SelectedProductOption, LineIem } from 'typed-shopify-storefront'
@@ -39,3 +39,28 @@ const client = shopify({
     console.log(checkout.webUrl)
 })
 ```
+## Documentation
+
+Initialize the client
+```typescript
+const  client = shopify({
+    accessToken:  'somestore_storefront_token',
+    domain:  'somestore.myshopify.com'
+})
+```
+Once initialized, the client object is created with methods for interacting with the Shopify API.
+
+#### Product
+| Method | Description | Parameters | Returns |
+|--------|-------------|------------|---------|
+| `all()` | Retrieves all products from the store. | None | `Collection` |
+| `get(handle)` | Retrieves a product by its handle. | `handle: string` | `Product` |
+| `findVariant(variants, selectedOptions)` | Finds a variant of a product based on selected options. | `variants: ProductVariant[], selectedOptions: SelectedProductOption[]` | `ProductVariant \| undefined` |
+
+#### Checkout
+| Method | Description | Parameters | Returns |
+|--------|-------------|------------|---------|
+| `create(lineItems)` | Creates a new checkout with specified line items. | `lineItems: LineItem[]` | `Checkout` |
+
+
+
