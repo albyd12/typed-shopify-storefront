@@ -1,7 +1,10 @@
 {
   "name": "typed-shopify-storefront",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Typed client for the Shopify Storefront GraphQL API",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "author": "alby (0xalby)",
   "license": "MIT",
   "repository": {
@@ -10,7 +13,8 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "keywords": [
     "shopify",
@@ -20,16 +24,13 @@
     "shopify typescript"
   ],
   "scripts": {
-    "build": "pnpm run build:esm && pnpm run build:cjs",
+    "build": "npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
     "prepare": "pnpm run build",
     "prepublishOnly": "pnpm run prettier"
   },
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
   "devDependencies": {
     "@types/node": "latest",
     "prettier": "^3.2.5",
