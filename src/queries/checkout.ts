@@ -1,16 +1,21 @@
 import { Checkout } from "../types/checkout";
-import { CartItem } from "../types/cart";
-
+import { LineItem } from "../types/product";
 import { Client } from "../types/client";
 
 import { gql } from "../gql";
 
+/**
+ * Creates a checkout
+ * @param client 
+ * @param lineItems 
+ * @returns 
+ */
 export const createCheckout = async (
   client: Client,
-  lineItems: CartItem[],
+  lineItems: LineItem[],
 ): Promise<Checkout> => {
   const lineItemsObject = lineItems.map((item) => {
-    return `{ variantId: "${item.variant.id}", quantity:  ${item.amount} }`;
+    return `{ variantId: "${item.variantId}", quantity: ${item.amount} }`;
   });
   const query = `
     mutation {

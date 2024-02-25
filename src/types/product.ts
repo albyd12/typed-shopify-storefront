@@ -46,3 +46,8 @@ export interface Product extends ProductBase {
 export interface CollectionProduct extends ProductBase {}
 
 export type Collection = ProductBase[];
+
+export interface LineItem {
+  variantId: ProductVariant;
+  amount: number;
+}

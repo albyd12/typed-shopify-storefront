@@ -9,8 +9,8 @@ import {
   Product,
   ProductVariant,
   SelectedProductOption,
+  LineItem
 } from "./types/product";
-import { CartItem } from "./types/cart";
 import { Checkout } from "./types/checkout";
 
 //type exports
@@ -22,8 +22,8 @@ export {
   ProductOption,
   CollectionProduct,
   Collection,
+  LineItem
 } from "./types/product";
-export { CartItem } from "./types/cart";
 
 /**
  * Initializes Shopify Storefront client
@@ -42,7 +42,7 @@ const shopify = (
     ) => ProductVariant | undefined;
   };
   checkout: {
-    create: (lineItems: CartItem[]) => Promise<Checkout>;
+    create: (lineItems: LineItem[]) => Promise<Checkout>;
   };
 } => {
   return {
@@ -72,10 +72,10 @@ const shopify = (
     checkout: {
       /**
        * Creates a new checkout with specified line items.
-       * @param {CartItem[]} lineItems The line items to include in the checkout.
-       * @returns {Promise<Object>} A promise that resolves to the created checkout object.
+       * @param {LineItem[]} lineItems The line items to include in the checkout.
+       * @returns {Promise<Checkout>} A promise that resolves to the created checkout object.
        */
-      create: (lineItems: CartItem[]) =>
+      create: (lineItems: LineItem[]): Promise<Checkout> =>
         queries.checkout.createCheckout(client, lineItems),
     },
   };
