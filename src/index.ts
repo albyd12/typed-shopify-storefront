@@ -9,7 +9,7 @@ import {
   Product,
   ProductVariant,
   SelectedProductOption,
-  LineItem
+  LineItem,
 } from "./types/product";
 import { Checkout } from "./types/checkout";
 
@@ -22,7 +22,7 @@ export {
   ProductOption,
   CollectionProduct,
   Collection,
-  LineItem
+  LineItem,
 } from "./types/product";
 
 /**

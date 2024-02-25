@@ -6,9 +6,9 @@ import { gql } from "../gql";
 
 /**
  * Creates a checkout
- * @param client 
- * @param lineItems 
- * @returns 
+ * @param client
+ * @param lineItems
+ * @returns
  */
 export const createCheckout = async (
   client: Client,

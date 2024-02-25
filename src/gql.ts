@@ -3,9 +3,9 @@ import { parseGql } from "./utils/gql";
 
 /**
  * Sends a graphql query with headers
- * @param client 
- * @param query 
- * @returns 
+ * @param client
+ * @param query
+ * @returns
  */
 export const gql = async (client: Client, query: string) => {
   const URL = `https://${client.domain}/api/2022-10/graphql.json`;
