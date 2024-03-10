@@ -4,7 +4,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/0xalby/typed-shopify-storefront.svg)](https://github.com/0xalby/typed-shopify-storefront/issues)
 
 
-A simple, lightweight explicit library for interacting with the Shopify Storefront API
+A simple, lightweight, explicit library for interacting with the Shopify Storefront API
 
 ### Example
 
